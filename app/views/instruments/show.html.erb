@@ -20,7 +20,7 @@
           <br><%= review.created_at %></p>
         <% end %>
       </div>
-      <div>
+
         <% if current_user == @instrument.user %>
           <br><%= link_to "Edit this instrument offer", edit_instrument_path, class: "btn-instrument-edit" %>
         <br><%= link_to "Delete this instrument offer", instrument_path(@instrument.id),
@@ -30,7 +30,7 @@
         <% else %>
           <%= link_to "Book this instrument!", new_instrument_booking_path(@instrument.id), class: "btn-instrument-book" %>
         <% end %>
-      </div>
+
     </div>
   </div>
 </div>
