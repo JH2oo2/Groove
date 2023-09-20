@@ -28,7 +28,7 @@
     <% @instruments.each do |instrument| %>
       <%= link_to instrument_path(instrument.id), class: "t-none" do %>
         <div class="card-instrument">
-          <%= cl_image_tag instrument.photo.key, height: 300, width: 400, crop: :fill  %> <%# if instrument.photo.attached? %>
+          <%= cl_image_tag instrument.photo.key, height: 300, width: 400, crop: :fill if instrument.photo.attached? %>
           <h4><%= instrument.name.capitalize %></h4>
           <p>Offered by <%= User.find(instrument.user_id).username %>
           <br>Price: $<%= instrument.price %>
