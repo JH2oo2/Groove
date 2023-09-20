@@ -24,7 +24,7 @@
         <% end %>
     </div>
   </div>
-   <div class="card-info-reviews d-flex">
+   <div class="card-info-reviews">
         <h3>Reviews</h3>
         <% @instrument.reviews.each do |review| %>
           <br><p><%= "#{review.user.username}: #{review.comment}" %>
