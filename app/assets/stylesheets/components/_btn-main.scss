@@ -79,6 +79,23 @@ input {
   }
 }
 
+.btn-instrument-edit {
+  text-decoration: none;
+  background-color: #FD8DD0;
+  color: white;
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-family: 'Bebas Neue';
+  font-size: 20px;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.03);
+    background-color: #FFC0E6;
+    color: black;
+  }
+}
+
 .btn-review {
   text-decoration: none;
   background-color: #FD8DD0;
