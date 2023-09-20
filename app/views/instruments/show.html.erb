@@ -20,9 +20,9 @@
           <br><%= review.created_at %></p>
         <% end %>
       </div>
-      <div class="btn-instrument-book">
+      <div>
         <% if current_user == @instrument.user %>
-          <%= link_to "Edit this instrument offer", edit_instrument_path %>
+          <%= link_to "Edit this instrument offer", edit_instrument_path class: "btn-instrument-book"%>
         <br><%= link_to "Delete this instrument offer", instrument_path(@instrument.id),
 
             data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this offer?"} %>
