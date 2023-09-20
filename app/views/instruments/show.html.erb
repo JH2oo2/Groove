@@ -13,14 +13,6 @@
       <br><%= "Available from: #{@instrument.available_from}" %></p>
     </div>
     <div class="col-4 px-3 d-flex flex-column">
-      <div>
-        <h3>Reviews</h3>
-        <% @instrument.reviews.each do |review| %>
-          <br><p><%= "#{review.user.username}: #{review.comment}" %>
-          <br><%= review.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
-        <% end %>
-      </div>
-
         <% if current_user == @instrument.user %>
           <br><%= link_to "Edit this instrument offer", edit_instrument_path, class: "btn-instrument-edit" %>
         <br><%= link_to "Delete this instrument offer", instrument_path(@instrument.id),
@@ -30,9 +22,15 @@
         <% else %>
           <%= link_to "Book this instrument!", new_instrument_booking_path(@instrument.id), class: "btn-instrument-book" %>
         <% end %>
-
     </div>
   </div>
+   <div class="card-info-instrument d-flex">
+        <h3>Reviews</h3>
+        <% @instrument.reviews.each do |review| %>
+          <br><p><%= "#{review.user.username}: #{review.comment}" %>
+          <br><%= review.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+        <% end %>
+      </div>
 </div>
 <br><br><br><%= link_to "Back to all instruments on offer", instruments_path, class: "btn-main-back" %>
 <br>
