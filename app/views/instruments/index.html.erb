@@ -15,7 +15,7 @@
   </div>
 
   <div data-controller="toggle">
-  <button id="showMapButton" data-action="click->toggle#fire">Show Map</button>
+  <button id="MapButton" data-action="click->toggle#fire">Show Map</button>
     <div style='width: 1000px; height: 100vh'
         data-controller="map"
         class="full-screen-map"
@@ -42,9 +42,3 @@
 <% end %>
 </div>
 <br>
-
-<%# style='width: 400px; height: 300px; %>
-
-<%# <section id="content">
-  <%= button_tag "Show Map", id: "showMapButton", class: "btn btn-primary" %>
-<%# </section> %>
