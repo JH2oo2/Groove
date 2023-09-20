@@ -161,3 +161,30 @@
   }
 
 }
+
+
+.card-info-reviews {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 12px;
+  padding: 20px;
+  width: 95%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+
+  h4 {
+    font-size: 30px;
+    color: black;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue';
+    font-stretch: wider;
+  }
+
+  p {
+    font-size: 18px;
+    overflow: hidden;
+    color: black;
+    line-height: 30px;
+  }
