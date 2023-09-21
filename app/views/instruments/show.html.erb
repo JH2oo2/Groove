@@ -27,10 +27,11 @@
    <div class="card-info-reviews">
         <h3>Reviews</h3>
         <% @instrument.reviews.each do |review| %>
-          <br><p><%= "#{review.user.username}: #{review.comment}" %>
-          <br><%= review.created_at.strftime("%B %d %Y, %l:%M%P") %></p>
+          <br><p><strong><%= "#{review.user.username} " %></strong>
+          <br>"<%= "#{review.comment}" %>"</p>
+          <br><p class="time-ago"><%= time_ago_in_words(review.created_at)%> ago</p>
         <% end %>
-      </div>
+    </div>
 </div>
 <br><br><br><%= link_to "Back to all instruments on offer", instruments_path, class: "btn-main-back" %>
 <br>

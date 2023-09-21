@@ -26,7 +26,7 @@
 </div>
   <div class="i-cards d-flex flex-row flex-wrap">
     <% @instruments.each do |instrument| %>
-      <%= link_to instrument_path(instrument.id), class: "t-none" do %>
+      <%= link_to instrument_path(instrument.id) do %>
         <div class="card-instrument">
           <%= cl_image_tag instrument.photo.key, height: 300, width: 400, crop: :fill if instrument.photo.attached? %>
           <h4><%= instrument.name.capitalize %></h4>
