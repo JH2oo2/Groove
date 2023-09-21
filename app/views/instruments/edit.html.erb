@@ -1,5 +1,9 @@
-<h1>EDIT YOUR INSTRUMENT</h1>
 
+<div class="edit-body">
+<h1>EDIT YOUR INSTRUMENT</h1>
+<%= link_to "Back to all instruments", instruments_path, class: "btn-main-back", id: "back-edit" %>
+<br>
+<br>
 <%= simple_form_for(@instrument) do |f| %>
   <%= f.input :name %>
   <%= f.input :available_from %>
@@ -10,5 +14,4 @@
   <%= f.input :photo, as: :file %>
   <%= f.submit %>
 <% end %>
-<br>
-<%= link_to "Back to all instruments >", instruments_path %>
+</div>
